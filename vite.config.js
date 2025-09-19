@@ -1,5 +1,5 @@
 export default {
-  base: '/gptx/',
+  base: '/gpxt/',
   build: {
     sourcemap: true,
   }
