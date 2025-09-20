@@ -4,6 +4,10 @@ html,
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
 #map {
@@ -13,7 +17,25 @@ body {
   width: 100%;
 }
 
+.locate,
+.record {
+  left: .5em;
+}
+
 .locate {
   top: 6em;
-  left: .5em;
+}
+
+.record {
+  top: 8.5em;
+}
+
+.record.recording button {
+  color: red;
+}
+
+.info {
+  right: .5em;
+  top: .5em;
+  padding: .5em;
 }
