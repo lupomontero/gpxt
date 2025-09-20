@@ -1,4 +1,4 @@
-@import "node_modules/ol/ol.css";
+@import "ol/ol.css";
 
 html,
 body {
@@ -7,7 +7,6 @@ body {
   width: 100%;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  font-size: 14px;
 }
 
 #map {
@@ -35,7 +34,8 @@ body {
 }
 
 .info {
+  left: .5em;
   right: .5em;
-  top: .5em;
+  bottom: .5em;
   padding: .5em;
 }

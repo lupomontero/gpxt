@@ -116,11 +116,13 @@ const createInfoLayer = (map) => {
     properties: {
       updatePosition: (pos) => {
         info.innerHTML = `
-          Longitude: ${pos.coords.longitude.toFixed(6)}<br/>
-          Latitude: ${pos.coords.latitude.toFixed(6)}<br/>
-          Accuracy: ${pos.coords.accuracy} m<br/>
-          Altitude: ${pos.coords.altitude ? pos.coords.altitude.toFixed(2) + ' m' : 'N/A'}<br/>
-          Altitude Accuracy: ${pos.coords.altitudeAccuracy ? pos.coords.altitudeAccuracy + ' m' : 'N/A'}<br/>
+          Long: ${pos.coords.longitude.toFixed(6)} |
+          Lat: ${pos.coords.latitude.toFixed(6)}
+          (±${pos.coords.accuracy} m)<br/>
+          Altitude: ${pos.coords.altitude
+            ? pos.coords.altitude.toFixed(2) + ` m${pos.coords.altitudeAccuracy ? `${pos.coords.altitudeAccuracy} m` : ''}`
+            : 'N/A'
+          }<br/>
           Heading: ${pos.coords.heading ? pos.coords.heading.toFixed(2) + '°' : 'N/A'}<br/>
           Speed: ${pos.coords.speed ? pos.coords.speed.toFixed(2) + ' m/s' : 'N/A'}<br/>
         `;
